@@ -1,11 +1,69 @@
-@font-face{
-    font-family: Raleway;
-    src: url(../src/additional/Raleway-VariableFont_wght.ttf);
+@font-face {
+  font-family: Raleway;
+  src: url(../src/additional/Raleway-VariableFont_wght.ttf);
 }
-@font-face{
-    font-family: WorkSans;
-    src: url(../src/additional/WorkSans-VariableFont_wght.ttf);
+@font-face {
+  font-family: WorkSans;
+  src: url(../src/additional/WorkSans-VariableFont_wght.ttf);
 }
-body{
-    margin: 0;
+body {
+  margin: 0;
+  font-family: Raleway;
+  background-color: #f3f4f4;
+}
+.topBG {
+  position: relative;
+}
+.topBG::before {
+  content: '';
+  position: absolute;
+  background-color: #5e7ac4;
+  width: 100%;
+  height: 750px;
+  transform: skewY(-10deg) translateY(-30%);
+  z-index: -1;
+}
+.myPhoto {
+  max-width: 500px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+.info::after {
+  content: 'Bruce Wayne';
+  color: #f3f4f4;
+  font-size: 5rem;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1100px;
+  transform: translate(20%, 30%);
+}
+.about {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 600px;
+  height: 400px;
+  background-color: #f3f4f4;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+.links {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+.links > img {
+  width: 40px;
+  cursor: pointer;
 }
